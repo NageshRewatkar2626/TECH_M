@@ -1,0 +1,4 @@
+find "$(pwd)" -name .htaccess
+readlink -f filename 
+ls -d -1 "$PWD/"**/*
+find /home/Users/Hp/ -name bar -print    

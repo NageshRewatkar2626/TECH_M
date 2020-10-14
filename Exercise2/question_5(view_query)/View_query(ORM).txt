@@ -1,0 +1,8 @@
+from tm.models import RouterModel
+
+def view_data(request):
+
+	return render(request,'view.html',{'data':RouterModel.objects.all()})
+
+
+ORM Query for create view : RouterModel.objects.all() 

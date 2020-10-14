@@ -1,0 +1,3 @@
+Using Distinct we can access unique data
+
+SELECT DISTINCT column1, column2 FROM table_name;

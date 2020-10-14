@@ -1,0 +1,75 @@
+1. Copy a file from a remote server to a local machine
+
+It will ask the password for remote user
+
+>>>scp username@example.com:/remote/path/to/file /local/path
+
+-------------------------------------------------------------------------------
+2. Copy a directory from a remote server to a local machine
+
+-r should be used for directories
+
+scp -r username@example.com:/remote/path/to/directory  /local/path
+
+-------------------------------------------------------------------------------
+
+3. Copy a file from a local machine to a remote server
+
+scp /local/file/path username@example:/remote/path
+-------------------------------------------------------------------------------
+
+4. Copy a directory from a local machine to a remote server
+
+-r should be used for directories
+
+scp -r /local/directory/path username@example:/remote/directory/path
+--------------------------------------------------------------------------------
+
+5. Copy files by using RSA keys
+
+If there is an identity key (RSA) instead of password than -i should be added
+
+scp -i /path/to/key username@example.com:/remote/path/to/file /local/path
+--------------------------------------------------------------------------------
+
+1)Copying Single File From Server To Local System
+Syntax is,
+
+“ scp [username]@[host]:source/filename  [destination] ”
+
+
+Example:
+
+scp root@example.com:/opt/odoo/myfile.docx  /home/
+scp file.jar myUserName@boxName:/path/to/destination
+
+ 
+2)Copying Multiple Files
+
+scp [user@server-1]/source/file  [user@server-2]/destination/
+
+
+SFTP------------
+
+sftp myUserName@boxName
+
+put filename
+
+
+---------------------------------------------------------------------
+FTP
+
+
+$ftp_server = "ftp_server";
+$ftp_user_name = 'ftp_username' ;
+$ftp_user_pass = 'ftp_pass' ;
+$localDir = "full/path/";
+$serverDir = "full/path/";
+
+$conn_id = ftp_connect($ftp_server);
+
+$login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
+
+if (ftp_get($conn_id, $localDir, $serverDir, FTP_BINARY)) {
+    ftp_put($conn_id, $file, $fp, FTP_ASCII))
+}

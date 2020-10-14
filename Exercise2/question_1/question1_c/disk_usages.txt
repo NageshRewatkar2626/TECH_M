@@ -1,0 +1,29 @@
+1. To find out the disk usage summary of a /home/tecmint directory tree and each of its sub directories. Enter the command as
+>>>[root@tecmint]# du  /home/tecmint
+
+
+2.we can see sizes in Bytes, Kilobytes, Megabytes, Gigabytes etc.command as below
+>>> [root@tecmint]# du -h /home/tecmint
+
+
+3.To get the summary of a grand total disk usage size of an directory use the option “-s” as follows.
+>>> [root@tecmint]# du -sh /home/tecmint
+
+4. Using “-a” flag with “du” command displays the disk usage of all the files and directories.
+>>> [root@tecmint]# du -a /home/tecmint
+
+
+5. Using “-a” flag along with “-h” displays disk usage of all files and folders in human readeable format.
+>>> [root@tecmint]# du -ah /home/tecmint
+
+6. Find out the disk usage of a directory tree with its subtress in Kilobyte blcoks. Use the “-k” (displays size in 1024 bytes units).
+>>> [root@tecmint]# du -k /home/tecmint
+
+7. The “-c” flag provides a grand total usage disk space at the last line. If your directory taken 674MB space, then the last last two line of the output would be.
+>>> [root@tecmint]# du -ch /home/tecmint
+
+8. The below command calculates and displays the disk usage of all files and directories, but excludes the files that matches given pattern.
+>>> [root@tecmint]# du -ah --exclude="*.txt" /home/tecmint
+
+9. Display the disk usage based on modification of time, use the flag “–time” as shown below.
+>>> [root@tecmint]# du -ha --time /home/tecmint
